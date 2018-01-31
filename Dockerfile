@@ -21,8 +21,13 @@ RUN conda install nb_conda -y
 
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
-EXPOSE 8000 
+# currently not used. Additional port
+EXPOSE 8000
+
+# Jupyter notebook / lab standard port web traffic
 EXPOSE 8888
+
+# Visdom standard port
 EXPOSE 8097
 
 
