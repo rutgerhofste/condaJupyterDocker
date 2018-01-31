@@ -1,4 +1,4 @@
-FROM ubuntu:16.10
+FROM ubuntu:16.04
 MAINTAINER Rutger Hofste <rutger.hofste@wri.org>
 
 RUN apt-get update
@@ -15,7 +15,7 @@ VOLUME /volumes/data
 RUN mkdir /root/.jupyter
 RUN mkdir /.keys
 RUN chmod 400 /.keys
-RUN mkdir /volumes/repos
+RUN mkdir -p /volumes/repos
 
 RUN conda install nb_conda -y
 
@@ -23,4 +23,6 @@ RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 EXPOSE 8000 
 EXPOSE 8888
+EXPOSE 8097
+
 
