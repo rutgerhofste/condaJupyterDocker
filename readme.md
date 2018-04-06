@@ -1,7 +1,16 @@
 # condaJupyterDocker
 
-separate repo to build a docker image that has the conda 3 and jupyter environments installed and some basic volume / port stuff
+most basic docker image part of a full docker_gis stack. This docker image is based on Ubuntu 16.04 LTS and has Anaconda for Python and Jupyter as IDE. The Dockerfile exposes ports for Jupyter, PostgreSQL and VisDom. 
 
-this should be a full description of the docker image
+The docker image is tailored to cloud usage on Amazon EC2 instances, Google Compute engines etc.  
 
-Note to self: Docker cannot access the GPU of a host machine by default. Check out nvidia docker for more info. Running GPU related code in docker take therefore a bit more time to setup. No plan to invest in this setup now. Will use suitable AMI instead. 
+The docker image is stacked to minimize build time and dependencies. The full stack contains:
+
+1. [docker_gis](https://github.com/rutgerhofste/docker_gis)
+1. [docker_python_envs](https://github.com/rutgerhofste/docker_python_envs)
+1. [docker_conda_jupyter](https://github.com/rutgerhofste/docker_conda_jupyter)
+
+All images are hosted on [docker hub](https://hub.docker.com/u/rutgerhofste/)
+
+
+
