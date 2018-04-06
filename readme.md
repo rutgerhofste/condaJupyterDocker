@@ -1,6 +1,6 @@
 # Docker Conda Jupyter
 
-most basic docker image part of a full docker_gis stack. This docker image is based on Ubuntu 16.04 LTS and has Anaconda for Python and Jupyter as IDE. The Dockerfile exposes ports for Jupyter, PostgreSQL and VisDom. 
+First Docker image part of a full docker_gis stack. This docker image is based on Ubuntu 16.04 LTS and has Anaconda for Python and Jupyter as IDE. The Dockerfile exposes ports for Jupyter, PostgreSQL and VisDom. 
 
 The docker image is tailored to cloud usage on Amazon EC2 instances, Google Compute engines etc.  
 
