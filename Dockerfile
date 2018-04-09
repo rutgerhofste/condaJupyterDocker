@@ -1,8 +1,12 @@
 FROM ubuntu:16.04
 MAINTAINER Rutger Hofste <rutger.hofste@wri.org>
 
-RUN apt-get update
-RUN apt-get install -y git wget bzip2 unzip
+RUN apt-get update && apt-get install -y \
+  git \
+  wget \
+  bzip2 \
+  unzip \
+  gcc
 
 RUN wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh 
 RUN bash Anaconda3-4.4.0-Linux-x86_64.sh -b -p /opt/anaconda3
