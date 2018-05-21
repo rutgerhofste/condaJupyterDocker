@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM cuda:9.0-runtime-ubuntu16.04
 MAINTAINER Rutger Hofste <rutger.hofste@wri.org>
 
 RUN apt-get update && apt-get install -y \
